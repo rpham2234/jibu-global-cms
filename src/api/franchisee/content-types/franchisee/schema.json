@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "franchisees",
+  "info": {
+    "singularName": "franchisee",
+    "pluralName": "franchisees",
+    "displayName": "Franchisee"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Headshot": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    }
+  }
+}
