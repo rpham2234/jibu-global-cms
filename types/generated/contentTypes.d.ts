@@ -563,6 +563,44 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFranchiseeFormFranchiseeForm
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'franchisee_forms';
+  info: {
+    displayName: 'FranchiseeForm';
+    pluralName: 'franchisee-forms';
+    singularName: 'franchisee-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    AMF: Schema.Attribute.Enumeration<['Franchise', 'Area Master Franchise']>;
+    confirmationAccepted: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    Country: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Email: Schema.Attribute.Email;
+    LinkedIn: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::franchisee-form.franchisee-form'
+    > &
+      Schema.Attribute.Private;
+    Name: Schema.Attribute.String;
+    Phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    Resume: Schema.Attribute.Media<'files'>;
+    SetupLocation: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFranchiseeFranchisee extends Struct.CollectionTypeSchema {
   collectionName: 'franchisees';
   info: {
@@ -619,6 +657,37 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     siteName: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiJobJob extends Struct.CollectionTypeSchema {
+  collectionName: 'jobs';
+  info: {
+    displayName: 'Job';
+    pluralName: 'jobs';
+    singularName: 'job';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Department: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::job.job'> &
+      Schema.Attribute.Private;
+    Location: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
+    Type: Schema.Attribute.Enumeration<
+      ['Full-Time', 'Part-Time', 'Contract', 'Internship']
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1171,8 +1240,10 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::executive.executive': ApiExecutiveExecutive;
       'api::faq.faq': ApiFaqFaq;
+      'api::franchisee-form.franchisee-form': ApiFranchiseeFormFranchiseeForm;
       'api::franchisee.franchisee': ApiFranchiseeFranchisee;
       'api::global.global': ApiGlobalGlobal;
+      'api::job.job': ApiJobJob;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

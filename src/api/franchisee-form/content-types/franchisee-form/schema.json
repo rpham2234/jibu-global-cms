@@ -4,7 +4,7 @@
   "info": {
     "singularName": "franchisee-form",
     "pluralName": "franchisee-forms",
-    "displayName": "Franchisee-form"
+    "displayName": "FranchiseeForm"
   },
   "options": {
     "draftAndPublish": true
@@ -35,8 +35,7 @@
     },
     "Resume": {
       "type": "media",
-      "multiple": true,
-      "required": false,
+      "multiple": false,
       "allowedTypes": [
         "files"
       ]
