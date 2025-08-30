@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_applications",
+  "info": {
+    "singularName": "job-application",
+    "pluralName": "job-applications",
+    "displayName": "JobApplication"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "applicantLocation": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "coverLetter": {
+      "type": "string"
+    },
+    "consent": {
+      "type": "boolean",
+      "default": false
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "jobLocation": {
+      "type": "string"
+    },
+    "jobDescription": {
+      "type": "text"
+    },
+    "jobType": {
+      "type": "string"
+    }
+  }
+}
