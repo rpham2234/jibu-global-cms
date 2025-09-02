@@ -677,7 +677,7 @@ export interface ApiJobApplicationJobApplication
   attributes: {
     applicantLocation: Schema.Attribute.String;
     consent: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    coverLetter: Schema.Attribute.String;
+    coverLetter: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

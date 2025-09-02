@@ -27,7 +27,7 @@
       "type": "string"
     },
     "coverLetter": {
-      "type": "string"
+      "type": "text"
     },
     "consent": {
       "type": "boolean",
