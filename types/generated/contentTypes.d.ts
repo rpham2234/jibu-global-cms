@@ -719,6 +719,7 @@ export interface ApiJobJob extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Department: Schema.Attribute.String;
     Description: Schema.Attribute.Text;
+    FullDescription: Schema.Attribute.Media<'files'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::job.job'> &
       Schema.Attribute.Private;
