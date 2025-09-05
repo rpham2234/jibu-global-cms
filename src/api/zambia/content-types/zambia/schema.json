@@ -1,0 +1,14 @@
+{
+  "kind": "singleType",
+  "collectionName": "zambias",
+  "info": {
+    "singularName": "zambia",
+    "pluralName": "zambias",
+    "displayName": "Zambia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

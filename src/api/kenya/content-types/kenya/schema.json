@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "kenyas",
+  "info": {
+    "singularName": "kenya",
+    "pluralName": "kenyas",
+    "displayName": "Kenya"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteInfo": {
+      "type": "component",
+      "component": "shared.site-info",
+      "repeatable": false
+    }
+  }
+}

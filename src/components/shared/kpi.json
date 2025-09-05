@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_kpis",
+  "info": {
+    "displayName": "KPI"
+  },
+  "options": {},
+  "attributes": {
+    "countriesServed": {
+      "type": "string"
+    },
+    "retailPoints": {
+      "type": "string"
+    },
+    "franchisesLaunched": {
+      "type": "string"
+    },
+    "litresDistributed": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

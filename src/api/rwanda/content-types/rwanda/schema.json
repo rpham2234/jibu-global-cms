@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "rwandas",
+  "info": {
+    "singularName": "rwanda",
+    "pluralName": "rwandas",
+    "displayName": "Rwanda"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteInfo": {
+      "type": "component",
+      "component": "shared.site-info",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_hero_images",
+  "info": {
+    "displayName": "HeroImage"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,5 +1,29 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedHeroImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_hero_images';
+  info: {
+    displayName: 'HeroImage';
+  };
+  attributes: {
+    Subtitle: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedKpi extends Struct.ComponentSchema {
+  collectionName: 'components_shared_kpis';
+  info: {
+    displayName: 'KPI';
+  };
+  attributes: {
+    countriesServed: Schema.Attribute.String;
+    franchisesLaunched: Schema.Attribute.String;
+    litresDistributed: Schema.Attribute.String;
+    retailPoints: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -50,6 +74,28 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSiteInfo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_site_infos';
+  info: {
+    displayName: 'siteInfo';
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    center: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    countryCode: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 2;
+      }>;
+    facebook: Schema.Attribute.String;
+    instagram: Schema.Attribute.String;
+    linkedin: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    twitter: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSlider extends Struct.ComponentSchema {
   collectionName: 'components_shared_sliders';
   info: {
@@ -65,10 +111,13 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.hero-image': SharedHeroImage;
+      'shared.kpi': SharedKpi;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
+      'shared.site-info': SharedSiteInfo;
       'shared.slider': SharedSlider;
     }
   }
