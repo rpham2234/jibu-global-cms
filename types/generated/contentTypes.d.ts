@@ -534,6 +534,31 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDrcDrc extends Struct.SingleTypeSchema {
+  collectionName: 'drcs';
+  info: {
+    displayName: 'DRC';
+    pluralName: 'drcs';
+    singularName: 'drc';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::drc.drc'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    siteInfo: Schema.Attribute.Component<'shared.site-info', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiExecutiveExecutive extends Struct.CollectionTypeSchema {
   collectionName: 'executives';
   info: {
@@ -1516,6 +1541,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::burundi.burundi': ApiBurundiBurundi;
       'api::category.category': ApiCategoryCategory;
+      'api::drc.drc': ApiDrcDrc;
       'api::executive.executive': ApiExecutiveExecutive;
       'api::faq.faq': ApiFaqFaq;
       'api::franchisee-form.franchisee-form': ApiFranchiseeFormFranchiseeForm;

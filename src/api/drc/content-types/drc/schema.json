@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "drcs",
+  "info": {
+    "singularName": "drc",
+    "pluralName": "drcs",
+    "displayName": "DRC"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteInfo": {
+      "type": "component",
+      "component": "shared.site-info",
+      "repeatable": false
+    }
+  }
+}
