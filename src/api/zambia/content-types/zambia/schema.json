@@ -10,5 +10,11 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "siteInfo": {
+      "type": "component",
+      "component": "shared.site-info",
+      "repeatable": false
+    }
+  }
 }

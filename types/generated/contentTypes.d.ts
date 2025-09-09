@@ -474,6 +474,34 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBurundiBurundi extends Struct.SingleTypeSchema {
+  collectionName: 'burundis';
+  info: {
+    displayName: 'Burundi';
+    pluralName: 'burundis';
+    singularName: 'burundi';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::burundi.burundi'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    siteInfo: Schema.Attribute.Component<'shared.site-info', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
@@ -852,7 +880,7 @@ export interface ApiRwandaRwanda extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    siteInfo: Schema.Attribute.Component<'shared.site-info', true>;
+    siteInfo: Schema.Attribute.Component<'shared.site-info', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -880,6 +908,7 @@ export interface ApiTanzaniaTanzania extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    siteInfo: Schema.Attribute.Component<'shared.site-info', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -966,6 +995,7 @@ export interface ApiZambiaZambia extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    siteInfo: Schema.Attribute.Component<'shared.site-info', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1484,6 +1514,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::burundi.burundi': ApiBurundiBurundi;
       'api::category.category': ApiCategoryCategory;
       'api::executive.executive': ApiExecutiveExecutive;
       'api::faq.faq': ApiFaqFaq;

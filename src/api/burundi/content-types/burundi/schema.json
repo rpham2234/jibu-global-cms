@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "rwandas",
+  "collectionName": "burundis",
   "info": {
-    "singularName": "rwanda",
-    "pluralName": "rwandas",
-    "displayName": "Rwanda"
+    "singularName": "burundi",
+    "pluralName": "burundis",
+    "displayName": "Burundi"
   },
   "options": {
     "draftAndPublish": true
