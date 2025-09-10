@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bis",
+  "info": {
+    "singularName": "bi",
+    "pluralName": "bis",
+    "displayName": "BI"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locations": {
+      "type": "component",
+      "component": "shared.locations",
+      "repeatable": false
+    }
+  }
+}

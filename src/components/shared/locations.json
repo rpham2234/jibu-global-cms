@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_locations",
+  "info": {
+    "displayName": "locations"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

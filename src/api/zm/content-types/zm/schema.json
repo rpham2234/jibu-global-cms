@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zms",
+  "info": {
+    "singularName": "zm",
+    "pluralName": "zms",
+    "displayName": "ZM"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locations": {
+      "type": "component",
+      "component": "shared.locations",
+      "repeatable": false
+    }
+  }
+}

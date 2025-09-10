@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cds",
+  "info": {
+    "singularName": "cd",
+    "pluralName": "cds",
+    "displayName": "CD"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locations": {
+      "type": "component",
+      "component": "shared.locations",
+      "repeatable": false
+    }
+  }
+}

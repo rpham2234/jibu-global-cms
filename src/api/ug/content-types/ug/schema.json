@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ugs",
+  "info": {
+    "singularName": "ug",
+    "pluralName": "ugs",
+    "displayName": "UG"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locations": {
+      "type": "component",
+      "component": "shared.locations",
+      "repeatable": false
+    }
+  }
+}

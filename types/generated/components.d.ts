@@ -24,6 +24,19 @@ export interface SharedKpi extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLocations extends Struct.ComponentSchema {
+  collectionName: 'components_shared_locations';
+  info: {
+    displayName: 'locations';
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    position: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -113,6 +126,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.hero-image': SharedHeroImage;
       'shared.kpi': SharedKpi;
+      'shared.locations': SharedLocations;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tzs",
+  "info": {
+    "singularName": "tz",
+    "pluralName": "tzs",
+    "displayName": "TZ"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locations": {
+      "type": "component",
+      "component": "shared.locations",
+      "repeatable": false
+    }
+  }
+}

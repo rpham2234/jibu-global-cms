@@ -474,6 +474,31 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBiBi extends Struct.CollectionTypeSchema {
+  collectionName: 'bis';
+  info: {
+    displayName: 'BI';
+    pluralName: 'bis';
+    singularName: 'bi';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::bi.bi'> &
+      Schema.Attribute.Private;
+    locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBurundiBurundi extends Struct.SingleTypeSchema {
   collectionName: 'burundis';
   info: {
@@ -528,6 +553,31 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCdCd extends Struct.CollectionTypeSchema {
+  collectionName: 'cds';
+  info: {
+    displayName: 'CD';
+    pluralName: 'cds';
+    singularName: 'cd';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::cd.cd'> &
+      Schema.Attribute.Private;
+    locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -684,6 +734,31 @@ export interface ApiFranchiseeFranchisee extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiGhGh extends Struct.CollectionTypeSchema {
+  collectionName: 'ghs';
+  info: {
+    displayName: 'GH';
+    pluralName: 'ghs';
+    singularName: 'gh';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::gh.gh'> &
+      Schema.Attribute.Private;
+    locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGhanaGhana extends Struct.SingleTypeSchema {
   collectionName: 'ghanas';
   info: {
@@ -787,6 +862,31 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiJgoJgo extends Struct.CollectionTypeSchema {
+  collectionName: 'jgos';
+  info: {
+    displayName: 'JGO';
+    pluralName: 'jgos';
+    singularName: 'jgo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::jgo.jgo'> &
+      Schema.Attribute.Private;
+    locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiJobApplicationJobApplication
   extends Struct.CollectionTypeSchema {
   collectionName: 'job_applications';
@@ -859,6 +959,31 @@ export interface ApiJobJob extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiKeKe extends Struct.CollectionTypeSchema {
+  collectionName: 'kes';
+  info: {
+    displayName: 'KE';
+    pluralName: 'kes';
+    singularName: 'ke';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::ke.ke'> &
+      Schema.Attribute.Private;
+    locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiKenyaKenya extends Struct.SingleTypeSchema {
   collectionName: 'kenyas';
   info: {
@@ -878,6 +1003,31 @@ export interface ApiKenyaKenya extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     siteInfo: Schema.Attribute.Component<'shared.site-info', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiRwRw extends Struct.CollectionTypeSchema {
+  collectionName: 'rws';
+  info: {
+    displayName: 'RW';
+    pluralName: 'rws';
+    singularName: 'rw';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::rw.rw'> &
+      Schema.Attribute.Private;
+    locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -971,6 +1121,56 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTzTz extends Struct.CollectionTypeSchema {
+  collectionName: 'tzs';
+  info: {
+    displayName: 'TZ';
+    pluralName: 'tzs';
+    singularName: 'tz';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::tz.tz'> &
+      Schema.Attribute.Private;
+    locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiUgUg extends Struct.CollectionTypeSchema {
+  collectionName: 'ugs';
+  info: {
+    displayName: 'UG';
+    pluralName: 'ugs';
+    singularName: 'ug';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::ug.ug'> &
+      Schema.Attribute.Private;
+    locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiUgandaUganda extends Struct.SingleTypeSchema {
   collectionName: 'ugandas';
   info: {
@@ -1021,6 +1221,31 @@ export interface ApiZambiaZambia extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     siteInfo: Schema.Attribute.Component<'shared.site-info', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiZmZm extends Struct.CollectionTypeSchema {
+  collectionName: 'zms';
+  info: {
+    displayName: 'ZM';
+    pluralName: 'zms';
+    singularName: 'zm';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::zm.zm'> &
+      Schema.Attribute.Private;
+    locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1539,24 +1764,33 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::bi.bi': ApiBiBi;
       'api::burundi.burundi': ApiBurundiBurundi;
       'api::category.category': ApiCategoryCategory;
+      'api::cd.cd': ApiCdCd;
       'api::drc.drc': ApiDrcDrc;
       'api::executive.executive': ApiExecutiveExecutive;
       'api::faq.faq': ApiFaqFaq;
       'api::franchisee-form.franchisee-form': ApiFranchiseeFormFranchiseeForm;
       'api::franchisee.franchisee': ApiFranchiseeFranchisee;
+      'api::gh.gh': ApiGhGh;
       'api::ghana.ghana': ApiGhanaGhana;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::jgo.jgo': ApiJgoJgo;
       'api::job-application.job-application': ApiJobApplicationJobApplication;
       'api::job.job': ApiJobJob;
+      'api::ke.ke': ApiKeKe;
       'api::kenya.kenya': ApiKenyaKenya;
+      'api::rw.rw': ApiRwRw;
       'api::rwanda.rwanda': ApiRwandaRwanda;
       'api::tanzania.tanzania': ApiTanzaniaTanzania;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
+      'api::tz.tz': ApiTzTz;
+      'api::ug.ug': ApiUgUg;
       'api::uganda.uganda': ApiUgandaUganda;
       'api::zambia.zambia': ApiZambiaZambia;
+      'api::zm.zm': ApiZmZm;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

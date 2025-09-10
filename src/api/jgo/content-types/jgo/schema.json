@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jgos",
+  "info": {
+    "singularName": "jgo",
+    "pluralName": "jgos",
+    "displayName": "JGO"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locations": {
+      "type": "component",
+      "component": "shared.locations",
+      "repeatable": false
+    }
+  }
+}

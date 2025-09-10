@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ghs",
+  "info": {
+    "singularName": "gh",
+    "pluralName": "ghs",
+    "displayName": "GH"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locations": {
+      "type": "component",
+      "component": "shared.locations",
+      "repeatable": false
+    }
+  }
+}

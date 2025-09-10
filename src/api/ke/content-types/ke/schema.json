@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kes",
+  "info": {
+    "singularName": "ke",
+    "pluralName": "kes",
+    "displayName": "KE"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locations": {
+      "type": "component",
+      "component": "shared.locations",
+      "repeatable": false
+    }
+  }
+}
