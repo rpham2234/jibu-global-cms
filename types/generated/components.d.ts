@@ -31,6 +31,7 @@ export interface SharedLocations extends Struct.ComponentSchema {
   };
   attributes: {
     address: Schema.Attribute.String;
+    email: Schema.Attribute.Email;
     name: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     position: Schema.Attribute.String;

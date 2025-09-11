@@ -14,6 +14,9 @@
     "position": {
       "type": "string"
     },
+    "email": {
+      "type": "email"
+    },
     "phone": {
       "type": "string"
     }

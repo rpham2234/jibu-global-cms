@@ -862,6 +862,37 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiJgoCarouselJgoCarousel extends Struct.CollectionTypeSchema {
+  collectionName: 'jgo_carousels';
+  info: {
+    displayName: 'lpg-carousel';
+    pluralName: 'jgo-carousels';
+    singularName: 'jgo-carousel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::jgo-carousel.jgo-carousel'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    src: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiJgoJgo extends Struct.CollectionTypeSchema {
   collectionName: 'jgos';
   info: {
@@ -1777,6 +1808,7 @@ declare module '@strapi/strapi' {
       'api::ghana.ghana': ApiGhanaGhana;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::jgo-carousel.jgo-carousel': ApiJgoCarouselJgoCarousel;
       'api::jgo.jgo': ApiJgoJgo;
       'api::job-application.job-application': ApiJobApplicationJobApplication;
       'api::job.job': ApiJobJob;
