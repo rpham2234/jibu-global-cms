@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jgo_contacts",
+  "info": {
+    "singularName": "jgo-contact",
+    "pluralName": "jgo-contacts",
+    "displayName": "JGOContact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contact": {
+      "type": "component",
+      "component": "shared.contact-form",
+      "repeatable": false
+    }
+  }
+}

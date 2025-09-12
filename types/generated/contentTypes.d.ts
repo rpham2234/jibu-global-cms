@@ -977,6 +977,34 @@ export interface ApiJgoCarouselJgoCarousel extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiJgoContactJgoContact extends Struct.CollectionTypeSchema {
+  collectionName: 'jgo_contacts';
+  info: {
+    displayName: 'JGOContact';
+    pluralName: 'jgo-contacts';
+    singularName: 'jgo-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'shared.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::jgo-contact.jgo-contact'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiJgoJgo extends Struct.CollectionTypeSchema {
   collectionName: 'jgos';
   info: {
@@ -2036,6 +2064,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::jgo-carousel.jgo-carousel': ApiJgoCarouselJgoCarousel;
+      'api::jgo-contact.jgo-contact': ApiJgoContactJgoContact;
       'api::jgo.jgo': ApiJgoJgo;
       'api::job-application.job-application': ApiJobApplicationJobApplication;
       'api::job.job': ApiJobJob;
