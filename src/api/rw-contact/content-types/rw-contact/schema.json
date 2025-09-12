@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rw_contacts",
+  "info": {
+    "singularName": "rw-contact",
+    "pluralName": "rw-contacts",
+    "displayName": "RWContact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contact": {
+      "type": "component",
+      "component": "shared.contact-form",
+      "repeatable": false
+    }
+  }
+}

@@ -474,6 +474,34 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBiContactBiContact extends Struct.CollectionTypeSchema {
+  collectionName: 'bi_contacts';
+  info: {
+    displayName: 'BIContact';
+    pluralName: 'bi-contacts';
+    singularName: 'bi-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'shared.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::bi-contact.bi-contact'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBiBi extends Struct.CollectionTypeSchema {
   collectionName: 'bis';
   info: {
@@ -553,6 +581,34 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCdContactCdContact extends Struct.CollectionTypeSchema {
+  collectionName: 'cd_contacts';
+  info: {
+    displayName: 'CDContact';
+    pluralName: 'cd-contacts';
+    singularName: 'cd-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'shared.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::cd-contact.cd-contact'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -727,6 +783,34 @@ export interface ApiFranchiseeFranchisee extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Location: Schema.Attribute.String;
     Name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGhContactGhContact extends Struct.CollectionTypeSchema {
+  collectionName: 'gh_contacts';
+  info: {
+    displayName: 'GHContact';
+    pluralName: 'gh-contacts';
+    singularName: 'gh-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'shared.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gh-contact.gh-contact'
+    > &
+      Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -990,6 +1074,34 @@ export interface ApiJobJob extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiKeContactKeContact extends Struct.CollectionTypeSchema {
+  collectionName: 'ke_contacts';
+  info: {
+    displayName: 'KEContact';
+    pluralName: 'ke-contacts';
+    singularName: 'ke-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'shared.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ke-contact.ke-contact'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiKeKe extends Struct.CollectionTypeSchema {
   collectionName: 'kes';
   info: {
@@ -1034,6 +1146,34 @@ export interface ApiKenyaKenya extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     siteInfo: Schema.Attribute.Component<'shared.site-info', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiRwContactRwContact extends Struct.CollectionTypeSchema {
+  collectionName: 'rw_contacts';
+  info: {
+    displayName: 'RWContact';
+    pluralName: 'rw-contacts';
+    singularName: 'rw-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'shared.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::rw-contact.rw-contact'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1152,6 +1292,34 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTzContactTzContact extends Struct.CollectionTypeSchema {
+  collectionName: 'tz_contacts';
+  info: {
+    displayName: 'TZContact';
+    pluralName: 'tz-contacts';
+    singularName: 'tz-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'shared.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tz-contact.tz-contact'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTzTz extends Struct.CollectionTypeSchema {
   collectionName: 'tzs';
   info: {
@@ -1170,6 +1338,34 @@ export interface ApiTzTz extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::tz.tz'> &
       Schema.Attribute.Private;
     locations: Schema.Attribute.Component<'shared.locations', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiUgContactUgContact extends Struct.CollectionTypeSchema {
+  collectionName: 'ug_contacts';
+  info: {
+    displayName: 'UGContact';
+    pluralName: 'ug-contacts';
+    singularName: 'ug-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'shared.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ug-contact.ug-contact'
+    > &
+      Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1252,6 +1448,34 @@ export interface ApiZambiaZambia extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     siteInfo: Schema.Attribute.Component<'shared.site-info', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiZmContactZmContact extends Struct.CollectionTypeSchema {
+  collectionName: 'zm_contacts';
+  info: {
+    displayName: 'ZMContact';
+    pluralName: 'zm-contacts';
+    singularName: 'zm-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact: Schema.Attribute.Component<'shared.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::zm-contact.zm-contact'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1795,15 +2019,18 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::bi-contact.bi-contact': ApiBiContactBiContact;
       'api::bi.bi': ApiBiBi;
       'api::burundi.burundi': ApiBurundiBurundi;
       'api::category.category': ApiCategoryCategory;
+      'api::cd-contact.cd-contact': ApiCdContactCdContact;
       'api::cd.cd': ApiCdCd;
       'api::drc.drc': ApiDrcDrc;
       'api::executive.executive': ApiExecutiveExecutive;
       'api::faq.faq': ApiFaqFaq;
       'api::franchisee-form.franchisee-form': ApiFranchiseeFormFranchiseeForm;
       'api::franchisee.franchisee': ApiFranchiseeFranchisee;
+      'api::gh-contact.gh-contact': ApiGhContactGhContact;
       'api::gh.gh': ApiGhGh;
       'api::ghana.ghana': ApiGhanaGhana;
       'api::global.global': ApiGlobalGlobal;
@@ -1812,16 +2039,21 @@ declare module '@strapi/strapi' {
       'api::jgo.jgo': ApiJgoJgo;
       'api::job-application.job-application': ApiJobApplicationJobApplication;
       'api::job.job': ApiJobJob;
+      'api::ke-contact.ke-contact': ApiKeContactKeContact;
       'api::ke.ke': ApiKeKe;
       'api::kenya.kenya': ApiKenyaKenya;
+      'api::rw-contact.rw-contact': ApiRwContactRwContact;
       'api::rw.rw': ApiRwRw;
       'api::rwanda.rwanda': ApiRwandaRwanda;
       'api::tanzania.tanzania': ApiTanzaniaTanzania;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
+      'api::tz-contact.tz-contact': ApiTzContactTzContact;
       'api::tz.tz': ApiTzTz;
+      'api::ug-contact.ug-contact': ApiUgContactUgContact;
       'api::ug.ug': ApiUgUg;
       'api::uganda.uganda': ApiUgandaUganda;
       'api::zambia.zambia': ApiZambiaZambia;
+      'api::zm-contact.zm-contact': ApiZmContactZmContact;
       'api::zm.zm': ApiZmZm;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

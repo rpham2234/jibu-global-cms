@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cd_contacts",
+  "info": {
+    "singularName": "cd-contact",
+    "pluralName": "cd-contacts",
+    "displayName": "CDContact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contact": {
+      "type": "component",
+      "component": "shared.contact-form",
+      "repeatable": false
+    }
+  }
+}

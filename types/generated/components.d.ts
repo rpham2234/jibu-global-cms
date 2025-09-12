@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedContactForm extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_forms';
+  info: {
+    displayName: 'contactForm';
+  };
+  attributes: {
+    email: Schema.Attribute.Email;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    subject: Schema.Attribute.String;
+  };
+}
+
 export interface SharedHeroImage extends Struct.ComponentSchema {
   collectionName: 'components_shared_hero_images';
   info: {
@@ -125,6 +138,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.contact-form': SharedContactForm;
       'shared.hero-image': SharedHeroImage;
       'shared.kpi': SharedKpi;
       'shared.locations': SharedLocations;

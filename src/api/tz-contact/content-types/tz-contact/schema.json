@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tz_contacts",
+  "info": {
+    "singularName": "tz-contact",
+    "pluralName": "tz-contacts",
+    "displayName": "TZContact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contact": {
+      "type": "component",
+      "component": "shared.contact-form",
+      "repeatable": false
+    }
+  }
+}
